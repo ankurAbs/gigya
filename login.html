@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title></title>
+    <script>vet_confirmation_popup = false;</script>
+    <!-- Meta Tags Declaration Section -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        var dashboardPageURL = "/fr/dashboard.aspx";
+        var interstitialPageURL = "/fr/interstitial-page.aspx";
+        //GIgya Hidden widget vars
+        var registerURL = '/fr/register.aspx';
+        var profileURL = '/fr/user-profile/profile.aspx';
+        var resetPasswordURL = '/fr/user-profile/reset-password.aspx';
+        var loginURL = '/fr/login.aspx';
+        var logoutURL = '/fr/user-profile/logout.aspx';
+        var changePasswordURL = '/fr/change-password.aspx';
+        var pendingApprovalURL = '/fr/user-profile/pending-approval.aspx';
+        var accessRestrictedURL = '/fr/access-restricted.aspx';
+        var currentAuthLocale = 'fr_BE';
+        var isAccountValidationRequired = false;
+        var isGigyaHideDocid = false;
+        var isGigyaUMMDisabled = true;
+        var gigya_screen_set = "RegistrationLogin";
+        var gigya_screen_id = "gigya-profile-screen";
+    </script>
+
+    <!-- <script type="text/javascript" src="https://cdns.gigya.com/js/gigya.js?apiKey=3_HgpAoLXZF6zVQglefD3FLuDSfZQvGSdMIZcw1OiNa7kfMvkUq3j0gZ4QgMseoBF5"></script> -->
+    <script type="text/javascript" src="https://cdns.gigya.com/js/gigya.js?apiKey=3_vwoYtucpWUSKGg71aRRqM9jEuH7XGKDe49RS2yDNNXIXM8r2Ys1a5D9Gw19953uI"></script>
+    <script type="text/javascript" src="//cdn.gigya-ext.com/gy.js"></script>
+    <script src="/gigya/gigya-cp.js?_=20200514035620" type="text/javascript"></script>
+
+
+
+</head>
+<body class="responsive">
+    <script type="text/javascript">var isSecuredPage = 'false';</script>
+    <script type="text/javascript">
+        gigya_screen_set = "RegistrationLogin";
+        gigya_screen_id = "gigya-login-screen";
+
+        function getUrlParameterByName(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+            return "";
+        };
+        $(document).ready(function () {
+            var customLocale = getUrlParameterByName("customLocale");
+        });
+    </script>
+    <!-- Breadcrumb-->
+    <section class="tiles">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 umm_container">
+                <div id="gigya-screensetcontainer"></div>
+            </div>
+            <div class="col-md-4 col-sm-4 umm_container"></div>
+        </div>
+    </section>
+</body>
+</html>
